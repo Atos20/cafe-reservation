@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import ApiCalls from '../ApiCalls/ApiCalls'
-
+import { Reservations } from '../Reservations/Reservations'
 class App extends Component {
   constructor(){
     super()
@@ -23,15 +23,14 @@ class App extends Component {
   }
   
   render() {
+    const { reservations }= this.state
     return (
       <div className="App">
         <h1 className='app-title'>Turing Cafe Reservations</h1>
         <div className='resy-form'>
 
         </div>
-        <div className='resy-container'>
-          
-        </div>
+        <Reservations reservations={reservations}/>
       </div>
     )
   }
