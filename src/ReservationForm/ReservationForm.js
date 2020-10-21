@@ -49,6 +49,7 @@ export class ReservationForm extends Component {
           <form className='reservation-form'>
             <label htmlFor='name'>
             <input 
+              placeholder='guest name'
               value={this.state.name}
               onChange={this.updateValues}
               name='name'
@@ -57,6 +58,7 @@ export class ReservationForm extends Component {
             </label>
             <label htmlFor='date'>
             <input 
+              placeholder='desired date'
               value={this.state.date}
               onChange={this.updateValues}
               min={this.state.date}
@@ -66,6 +68,7 @@ export class ReservationForm extends Component {
             </label>
             <label htmlFor='time'>
             <input 
+             placeholder='desired time'
               value={this.state.time}
               onChange={this.updateValues}
               name='time'
@@ -74,6 +77,7 @@ export class ReservationForm extends Component {
             </label>
             <label htmlFor='number-guest'>
             <input 
+              placeholder='desired guest count'
               value={this.state.numberGuest}
               onChange={this.updateValues}
               name='number'
@@ -81,7 +85,8 @@ export class ReservationForm extends Component {
               className='input input-number-guest'/>
             </label>
             <button
-            onClick={this.newReservation}>
+            
+              onClick={this.newReservation}>
               Make reservation
             </button>
           </form>
