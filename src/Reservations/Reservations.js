@@ -11,7 +11,6 @@ export const  Reservations = (props) =>{
         })
     }
 
-    // console.log(props.reservations)
     return (
         <div className='reservations-container'>
             {displayReservations(props.reservations)}
@@ -22,11 +21,3 @@ export const  Reservations = (props) =>{
 Reservations.propTypes = {
     reservations : PropTypes.array
 }
-
-/*
-date: "12/29"
-id: 1
-name: "Christie"
-number: 12
-time: "7:00"
-*/

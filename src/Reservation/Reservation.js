@@ -3,7 +3,6 @@ import './Reservation.css'
 import PropTypes from 'prop-types'
 
 export const Reservation = (props) =>{
-    console.log('reservation' ,props.reservation)
     const { date, id, name, number, time} = props.reservation
 
     return (
