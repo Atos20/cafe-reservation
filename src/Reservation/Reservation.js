@@ -1,30 +1,34 @@
 import React from 'react'
 import './Reservation.css'
+import PropTypes from 'prop-types'
 
-export const Reservation = () =>{
+export const Reservation = (props) =>{
+    console.log('reservation' ,props.reservation)
+    const { date, id, name, number, time} = props.reservation
+
     return (
-        <div id='' className='reservation-container'>
+        <div id={id} className='reservation-container'>
 
-          <div id='' className="inner-container">
+          <div id={id} className="inner-container">
           
             <div className="data-container">
 
               <h1 className="title name-title">Guest Name</h1>
-              <p className="data user-name">Christie</p>
+              <p className="data user-name">{name}</p>
 
             </div>
 
             <div className="data-container">
 
               <h1 className="title date">Date</h1>
-              <p className="data user-date">12/29</p>
+              <p className="data user-date">{date}</p>
 
             </div>
 
             <div className="data-container">
 
-              <h1 className="title name-title">Number of Gust</h1>
-              <p className="data user-name">12</p>
+              <h1 className="title name-title">Number of Guest</h1>
+              <p className="data user-name">{number}</p>
 
             </div>
 
@@ -32,7 +36,7 @@ export const Reservation = () =>{
             <div className="data-container">
 
               <h1 className="title name-title">Time</h1>
-              <p className="data user-name">7:00</p>
+              <p className="data user-name">{time}</p>
 
             </div>
 
@@ -41,6 +45,10 @@ export const Reservation = () =>{
           </div>
         </div>
     )
+}
+
+Reservation.propTypes = {
+    reservation : PropTypes.object
 }
 
 /*
