@@ -1,0 +1,46 @@
+.reservation-container{
+    display: flex;
+    flex-direction: column;
+    height: 22vh;
+    width: 15vw;
+    background-color: teal;
+    margin: 10%;
+    padding: 5%;
+    justify-content: center;
+}
+
+.inner-container{
+    padding: 1%;
+    background-color: aliceblue;
+
+}
+
+
+.data-container{
+    display: inline-flex;
+    align-items: baseline;
+    justify-content: space-around;
+
+}
+
+.title{
+    font-size: 1em;
+    margin: 3%;
+}
+
+.data{
+
+    margin: 10%;
+    padding: 0%;
+
+}
+
+.cancel-button{
+    border: none;
+    color: beige;
+    text-align: center;
+    width: 90%;
+    background-color:  teal;
+    padding: 4%;
+    margin: 2%;
+}
