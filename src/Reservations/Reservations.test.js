@@ -7,16 +7,6 @@ import '@testing-library/jest-dom';
 
 describe('ReservationForm', () =>{
     let reservations;
-    beforeEach(() => {
-
-        ApiCalls.getAllReservations.mockResolvedValueOnce({
-            date: "12/29",
-            id: 1,
-            name: "Mock User",
-            number: 12,
-            time: "7:00",
-       })
-    })
 
     reservations = [{
         date: "12/29",
@@ -26,7 +16,7 @@ describe('ReservationForm', () =>{
         time: "7:00",
     }]
 
-    it('should be able to display an existing card', async() => {
+    it('should be able to display an existing card', () => {
         render(
             <Reservations reservations={reservations}/>
         )
