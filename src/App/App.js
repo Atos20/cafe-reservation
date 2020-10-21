@@ -12,11 +12,12 @@ class App extends Component {
       reservations: []
     }
   }
+
+
   componentDidMount = async () => {
     try{
       const promiseReservations = await ApiCalls.getAllReservations()
       this.setState({reservations: promiseReservations })
-      console.log(promiseReservations)
     }
     catch(error) {
       this.setState({ error: `You've got a ${error.status} Error` })
@@ -24,9 +25,21 @@ class App extends Component {
   }
 
   makeNewReservation = (newReservation) => {
-    console.log(newReservation)
     this.setState( {reservations : [...this.state.reservations,  newReservation] } )
   }
+
+  //started to write the method to Post a new reservation to the API
+  // postNewReservation = async(reservation) => {
+  //   try{
+  //     const promiseNewReservations = await ApiCalls.newReservations()
+  //     const promiseReservations = await ApiCalls.getAllReservations()
+  //     this.setState({reservations: promiseReservations })
+  //     console.log(promiseReservations)
+  //   }
+  //   catch(error) {
+  //     this.setState({ error: `You've got a ${error.status} Error` })
+  //   }
+  // }
   
   render() {
     const { reservations }= this.state

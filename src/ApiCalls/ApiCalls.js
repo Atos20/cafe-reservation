@@ -11,12 +11,12 @@ const ApiCalls = {
           .catch(error => console.log('error', error));
     },
 
-    newREservations(newReservation){
+    newReservations(newReservation){
         const myHeaders = new Headers();
         myHeaders.append("Content-Type", "application/json");
 
         // const raw = JSON.stringify({"name":"Orlando","date":"2020-12-20","time":"10:00","number":10});
-        const reservation = JSON.stringify({newReservation);
+        const reservation = JSON.stringify(newReservation);
 
         const requestOptions = {
         method: 'POST',
