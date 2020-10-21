@@ -1,0 +1,10 @@
+.reservation-form{
+    display: flex;
+    flex-direction: row;
+    margin: 5%;
+    justify-content: space-around;
+}
+
+.input{
+    margin: 3%;
+}
