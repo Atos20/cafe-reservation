@@ -2,6 +2,7 @@ import React from 'react';
 import { render, screen } from '@testing-library/react';
 import { ReservationForm } from './ReservationForm'
 import '@testing-library/jest-dom';
+
 describe('ReservationForm', () =>{
     beforeEach(() => {
 
@@ -11,7 +12,6 @@ describe('ReservationForm', () =>{
         render(
             <ReservationForm />
         )
-        // screen.debug()
         const nameInput = screen.getByPlaceholderText('guest name');
         const dateInput = screen.getByPlaceholderText('desired date');
         const timeInput = screen.getByPlaceholderText('desired time');
