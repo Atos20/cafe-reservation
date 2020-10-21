@@ -1,14 +1,11 @@
 import React from 'react';
-import { render, screen, waitFor } from '@testing-library/react'
+import { render, screen } from '@testing-library/react'
 import { Reservations } from './Reservations'
-import ApiCalls from '../ApiCalls/ApiCalls'
-jest.mock('../ApiCalls/ApiCalls');
 import '@testing-library/jest-dom';
 
 describe('ReservationForm', () =>{
-    let reservations;
 
-    reservations = [{
+    const reservations = [{
         date: "12/29",
         id: 1,
         name: "Mock User",
